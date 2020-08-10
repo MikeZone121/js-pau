@@ -2,22 +2,23 @@ let __ = undefined;
 
 describe('var...', () => {
   function iterator(bool) {
+    var name;
     if (bool) {
-      var name = 'Hackages';
+      name = 'Hackages';
     }
     return name;
   }
 
   it('what do you expect?', () => {
     const actual = iterator(true);
-    expect(actual).toEqual(__);
+    expect(actual).toEqual('Hackages');
   });
 });
 
 describe('let...', () => {
   function iterator(bool) {
+    let variable = 'Hackages';
     if (bool) {
-      let variable = 'Hackages';
     }
     // you can see that the variable is not defined, that's because of the block scope
     //TODO Make the test pass by declaring the variable before the if
@@ -27,7 +28,7 @@ describe('let...', () => {
   it('what do you expect?', () => {
     const actual = iterator(true);
 
-    expect(actual).toEqual(__);
+    expect(actual).toEqual('Hackages');
   });
 });
 
@@ -39,7 +40,7 @@ describe('scope', () => {
     var b = 2;
     const actual = foo(2);
 
-    expect(actual).toEqual(__);
+    expect(actual).toEqual(4);
   });
 
   it('Scope 2', () => {
@@ -52,6 +53,6 @@ describe('scope', () => {
       return result;
     }
     const actual = foo(2);
-    expect(actual).toEqual(__);
+    expect(actual).toEqual(10);
   });
 });

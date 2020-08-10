@@ -1,22 +1,22 @@
 let __ = undefined;
 
-xdescribe('Basics JavaScript concepts', () => {
+describe('Basics JavaScript concepts', () => {
   describe('About Equality', () => {
     it('numeric equality', () => {
-      expect(3 == 4).toEqual(__);
+      expect(3 == 4).toEqual(false);
     });
 
     it('string equality', () => {
-      expect('3' == '7').toEqual(__);
+      expect('3' == '7').toEqual(false);
     });
 
     it('equality without type coercion', () => {
-      expect(3 == '3').toEqual(__);
+      expect(3 == '3').toEqual(true);
     });
 
     it('equality with type coercion', () => {
-      expect(3 == '3').toEqual(__);
-      expect(3 === '3').toEqual(__);
+      expect(3 == '3').toEqual(true);
+      expect(3 === '3').toEqual(false);
     });
 
     it('equality with object', () => {
