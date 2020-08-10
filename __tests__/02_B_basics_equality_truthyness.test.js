@@ -22,44 +22,44 @@ describe('Basics JavaScript concepts', () => {
     it('equality with object', () => {
       const vic = { name: 'Vic' };
       const milen = vic;
-      expect(vic === milen).toEqual(__);
-      expect(vic === { name: 'Vic' }).toEqual(__);
+      expect(vic === milen).toEqual(true);
+      expect(vic === { name: 'Vic' }).toEqual(false);
     });
 
     it('Are 2 strings equal?', () => {
       const apple = 'apple';
-      expect('apple' === apple).toEqual(__);
+      expect('apple' === apple).toEqual(true);
     });
 
     it('How about NaN', () => {
-      expect(NaN === NaN).toEqual(__);
+      expect(NaN === NaN).toEqual(false);
     });
   });
 
   describe('About Truthyness', () => {
     it('truthyness of positive numbers', () => {
       const oneIsTruthy = 1 ? true : false;
-      expect(oneIsTruthy).toEqual(__);
+      expect(oneIsTruthy).toEqual(true);
     });
 
     it('truthyness of negative numbers', () => {
       const negativeOneIsTruthy = -1 ? true : false;
-      expect(negativeOneIsTruthy).toEqual(__);
+      expect(negativeOneIsTruthy).toEqual(true);
     });
 
     it('truthyness of zero', () => {
       const zeroIsTruthy = 0 ? true : false;
-      expect(zeroIsTruthy).toEqual(__);
+      expect(zeroIsTruthy).toEqual(false);
     });
 
     it('truthyness of null', () => {
       const nullIsTruthy = null ? true : false;
-      expect(nullIsTruthy).toEqual(__);
+      expect(nullIsTruthy).toEqual(false);
     });
 
     it('null coalescing', () => {
       const result = null || 'a value';
-      expect(result).toEqual(__);
+      expect(result).toEqual('a value');
     });
   });
 });

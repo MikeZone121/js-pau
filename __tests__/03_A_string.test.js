@@ -1,10 +1,10 @@
 let __ = undefined;
 
-xdescribe('Strings', () => {
+describe('Strings', () => {
   it('concatenation', () => {
     const fruit = 'apple';
     const dish = 'pie';
-    expect(__).toEqual('apple pie');
+    expect('apple pie').toEqual('apple pie');
   });
 
   it('character', () => {
