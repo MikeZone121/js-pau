@@ -7,7 +7,7 @@ xdescribe('Objects', () => {
   });
 
   it('object literal notation', () => {
-    let person = {
+    let person = {d
       __: __,
       __: __,
     };
